@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Tech Stack Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Random Tech Stack Generator</h1>
+    </header>
+    <main id="sections-container">
+        <section id="backend" draggable="true">
+            <h2>Backend</h2>
+            <p id="backend-tech">Click the button to generate a backend technology.</p>
+            <button onclick="generateBackend()">Generate Backend Tech</button>
+        </section>
+        <section id="frontend" draggable="true">
+            <h2>Frontend</h2>
+            <p id="frontend-tech">Click the button to generate a frontend technology.</p>
+            <button onclick="generateFrontend()">Generate Frontend Tech</button>
+        </section>
+        <section id="database" draggable="true">
+            <h2>Database</h2>
+            <p id="database-tech">Click the button to generate a database technology.</p>
+            <button onclick="generateDatabase()">Generate Database Tech</button>
+        </section>
+        <section id="hosting" draggable="true">
+            <h2>Hosting</h2>
+            <p id="hosting-tech">Click the button to generate a hosting technology.</p>
+            <button onclick="generateHosting()">Generate Hosting Tech</button>
+        </section>
+        <section id="customize" draggable="true">
+            <h2>Customize</h2>
+            <form id="customize-form">
+                <label for="customize-section">Section:</label>
+                <select id="customize-section">
+                    <option value="backend">Backend</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="database">Database</option>
+                    <option value="hosting">Hosting</option>
+                </select>
+                <label for="customize-tech">Technology:</label>
+                <input type="text" id="customize-tech" placeholder="Enter a new technology">
+                <button type="button" onclick="addCustomTech()">Add Technology</button>
+            </form>
+        </section>
+        <section id="favorites" draggable="true">
+            <h2>Favorites</h2>
+            <p id="favorites-list">Your favorite technologies will appear here.</p>
+        </section>
+        <section id="favorites-by-category" draggable="true">
+            <h2>Favorites by Category</h2>
+            <div id="favorites-backend">
+                <h3>Backend</h3>
+                <ul id="backend-favorites-list"></ul>
+            </div>
+            <div id="favorites-frontend">
+                <h3>Frontend</h3>
+                <ul id="frontend-favorites-list"></ul>
+            </div>
+            <div id="favorites-database">
+                <h3>Database</h3>
+                <ul id="database-favorites-list"></ul>
+            </div>
+            <div id="favorites-hosting">
+                <h3>Hosting</h3>
+                <ul id="hosting-favorites-list"></ul>
+            </div>
+        </section>
+        <section id="tech-details" draggable="true">
+            <h2>Technology Details</h2>
+            <div id="tech-details-content">
+                <p>Select a technology to see details.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Random Tech Stack Generator</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
